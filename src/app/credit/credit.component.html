@@ -1,0 +1,27 @@
+<div class="cont">
+  <nav>
+    <img src="https://i.ibb.co/mNKVVXF/back.png" class="back" (click)="goBack()" alt="back">
+    <h1>Solcita un Credito</h1>
+  </nav>
+  <main>
+    <h1>Saldo de banco</h1>
+    <div class="credit">
+      <p>porfavor solcite su credito entre $10.000 - $100.000</p>
+      <mat-form-field appearance="fill">
+        <mat-label>Titular Credito</mat-label>
+        <input type="text" placeholder="porfavor ingresar Usuario" [(ngModel)]="credit.user" matInput>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>valor credito (porfavor no utilice puntos)</mat-label>
+        <input type="number" placeholder="porfavor ingresar Usuario" [(ngModel)]="credit.value" matInput>
+      </mat-form-field>
+      <div class="calendar">
+        <input matInput [matDatepicker]="picker"  [(ngModel)]="credit.date">
+        <mat-hint>Fecha Credito</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </div>
+      <button class="solcitar" (click)="sendCredit()">Solicitar Credito</button>
+    </div>
+  </main>
+</div>

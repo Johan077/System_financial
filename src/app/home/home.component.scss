@@ -1,0 +1,61 @@
+.cont{
+    width: 100%;
+    height: 100vh;
+
+    nav{
+        background: #35A22F;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1%;
+
+        h1{
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .logOut{
+            width: 3vw;
+            height: 3vw;
+        }
+
+    }
+
+    main{
+        width: 100%;
+        height: 100vh;
+        padding: 4%;
+
+        h1{
+            font-size: 2rem;
+            font-weight: bold;
+            color:#35A22F;
+            margin: 2%;
+        }
+
+        .services{
+            background: #35A22F;
+            width: 80%;
+            height: 70%;
+            color: #fff;
+            border-radius: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+
+            .bt-list{
+                background: #fff;
+                width: 80%;
+                height: 5vh;
+                border: 2px solid #fff;
+                border-radius: 20px;
+                margin: 2% 4%;
+                color: #35A22F;
+            }
+        }
+    }
+}

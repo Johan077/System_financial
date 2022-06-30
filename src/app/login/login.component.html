@@ -1,0 +1,42 @@
+<div class="cont">
+
+  <div class="form" *ngIf="log === false">
+    <img src="https://i.ibb.co/K2wswd5/oso.png" alt="oso">
+    <h1>Login</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Usuario</mat-label>
+      <input type="email" placeholder="porfavor ingresar Usuario" [(ngModel)]="user.email" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input type="password" placeholder="porfavor ingresar contraseña" [(ngModel)]="user.password" matInput>
+    </mat-form-field>
+    <p (click)="log = true">Crear Cuenta</p>
+    <div class="cont_button">
+      <button mat-button (click)="ingresar()">Ingresar</button>
+      <img class="google" src="https://i.ibb.co/DM0NBxv/google.png" alt="google" (click)="google()">    
+    </div>
+  </div>
+
+  <div class="form" *ngIf="log === true">
+    <img src="../../assets/img/verify.png" alt="register">
+    <h1>Registrar</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input type="text" placeholder="porfavor ingresar email" [(ngModel)]="useRegist.name" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" placeholder="porfavor ingresar email" [(ngModel)]="useRegist.email" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input type="password" placeholder="porfavor ingresar contraseña" [(ngModel)]="useRegist.password" matInput>
+    </mat-form-field>
+    <div class="cont_button">
+      <button mat-button (click)="register()">Registrar</button>
+      <button mat-button (click)="log = false">Cancelar</button>
+    </div>
+  </div>
+
+</div>

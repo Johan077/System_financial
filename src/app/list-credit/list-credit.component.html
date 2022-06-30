@@ -1,0 +1,24 @@
+<div class="cont">
+  <nav>
+    <img src="https://i.ibb.co/mNKVVXF/back.png" class="back" (click)="goBack()" alt="back">
+    <h1>Lista de creditos solcitados</h1>
+  </nav>
+  <main>
+    <h1>Historial de transcaciones</h1>
+
+    <table class="default">
+      <tr>
+        <th>Titular</th>
+        <th>Valor</th>
+        <th>Estado</th>
+        <th>Fecha Solicitud</th>
+      </tr>
+      <tr *ngFor="let credi of creditos">
+        <td>{{credi.user}}</td>
+        <td>{{credi.value}}</td>
+        <td>{{credi.estado}}</td>
+        <td>{{credi.date}}</td>
+      </tr>
+    </table>
+  </main>
+</div>
